@@ -1,85 +1,73 @@
-🌱 AgroLens - Intelligent Farming Assistant
-🚀 How to Set It Up
-🛠️ Follow These Steps
+# 🌱 **AgroLens - Smart Agriculture App**
 
-📦 Download & Unpack the Code
+## 🚀 **Getting Started**
 
-Clone or download this repository as a ZIP file.
+### 🛠️ **Step-by-Step Instructions**
 
-Extract the contents to a desired directory, e.g., C:\Users\YourName\Projects\AgroLens.
+1. 📥 **Download & Extract the Project**
 
-💻 Launch the Command Prompt
+   - Download the ZIP file from this GitHub repository.
+   - Extract it to your preferred location (e.g., `C:\Users\YourName\Projects\AgroLens`).
 
-Hit Win + R, type cmd, and press Enter to open the terminal.
+2. 🖥️ **Open Command Prompt**
 
-📁 Move to the Project Directory
+   - Press **Windows + R**, type `cmd`, and hit **Enter**.
 
-Use the command below to switch to the app folder (update the path as needed):
+3. 📂 **Navigate to the Project Folder**
 
-cd C:\Users\YourName\Projects\AgroLens\AgroLens
+   - Run the following command (adjust the path if needed):
+     ```bash
+     cd C:\Users\YourName\Projects\AgroLens\AgroLens
+     ```
 
+4. 🚀 **Start the React Native App**
 
-📲 Start the React Native Frontend
+   - Run this command in the project root folder:
+     ```bash
+     npx expo start
+     ```
+   - This will open an Expo DevTools window in your browser.
+   - Use **Expo Go** on your phone to scan the QR code and launch the app.
 
-In the root project folder, run:
+5. 🌾 **Run the Crop Recommendation Model**
 
-npx expo start
+   - Open a new command prompt window.
+   - Navigate to the `crop_recommendation_model` folder:
+     ```bash
+     cd C:\Users\YourName\Projects\AgroLens\AgroLens\flask_server\crop_recommendation_model
+     ```
+   - Run the server:
+     ```bash
+     python app.py
+     ```
 
+6. 🍃 **Run the Leaf Disease Detection Model**
 
-This will launch Expo DevTools in your browser.
+   - Open another command prompt window.
+   - Navigate to the `leaf_disease_model` folder:
+     ```bash
+     cd C:\Users\YourName\Projects\AgroLens\AgroLens\flask_server\leaf_disease_model
+     ```
+   - Run the server:
+     ```bash
+     python app.py
+     ```
 
-Open the Expo Go app on your smartphone and scan the QR code.
+7. 📱 **Test the App**
 
-🌿 Launch the Crop Suggestion API
+   - Download **Expo Go** App on your phone.
+   - Open **Expo Go** on your phone.
+   - Scan the QR code displayed after running `npx expo start`.
+   - Input soil and weather data for crop recommendations.
+   - Upload a leaf image for disease detection.
 
-Open a new terminal window.
+---
 
-Navigate to the crop model folder:
+## ⚠️ **Important Notes**
 
-cd C:\Users\YourName\Projects\AgroLens\AgroLens\flask_server\crop_recommendation_model
-
-
-Run the Flask server:
-
-python app.py
-
-
-🍂 Launch the Leaf Disease Detection API
-
-Open another terminal window.
-
-Navigate to the plant disease model directory:
-
-cd C:\Users\YourName\Projects\AgroLens\AgroLens\flask_server\leaf_disease_model
-
-
-Start the backend server:
-
-python app.py
-
-
-✅ Try Out the App
-
-Open the Expo Go app on your device.
-
-Scan the QR code from step 4 to load the app.
-
-Enter soil and weather data to get crop recommendations.
-
-Upload a leaf image to detect potential plant diseases.
-
-⚠️ Things to Keep in Mind
-
-🔁 Run Both Backends Together: Make sure both Flask servers are active for full functionality.
-
-📡 Same Network: Ensure your smartphone and computer are connected to the same Wi-Fi network.
-
-📦 Install Dependencies First Time:
-
-npm install
-pip install -r requirements.txt
-
-
-⚡ Live Flask Servers Needed: Predictions only work while servers are running.
-
-🌿 Empowering Smart Farming with AI! 🚜
+- 🔄 **Simultaneous Server Execution**: Both servers must be running simultaneously for predictions to work.
+- 🌐 **Network Connection**: Ensure your phone and PC are connected to the same Wi-Fi network.
+- ⚙️ **Dependencies**: If running for the first time, install necessary dependencies:
+  ```bash
+  npm install
+  pip install -r requirements.txt
